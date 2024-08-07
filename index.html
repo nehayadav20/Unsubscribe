@@ -38,10 +38,12 @@
         // on  page load, fetch the email id of the user.
         window.onload = function() {
             $WZRK_WR.getEmail(isReEncode);
+            console.log("Email id " + isReEncode);
         };
         // will be called after the email id of the user has been fetched
         function wzrk_email_fetched(emailStr) {
             document.getElementById("email").value = emailStr;
+	    console.log("Email id fetched " + emailStr);
         }
         // will be called after the subscription preferences for the user have been updated
         function wzrk_email_subscription(status) {
